@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Uji Coba</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #25D366; color: white; padding: 1rem; text-align: center; }
+    .description-global { background: #f9f9f9; padding: 1rem; text-align: center; font-size: 0.95rem; color: #333; }
+    main { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 1rem; }
+    .product { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; text-align: center; }
+    .product img { max-width: 100%; height: auto; border-radius: 8px; }
+    .description { font-size: 0.9rem; color: #555; margin: 0.5rem 0; }
+    button { background: #25D366; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #128C7E; }
+    footer { text-align: center; padding: 1rem; background: #f1f1f1; }
+    .channel { margin-top: 0.5rem; font-size: 0.9rem; }
+    .channel a { color: #25D366; text-decoration: none; }
+    .channel a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Web Uji Coba</h1>
+  </header>
+
+  <div class="description-global">
+    <strong>DESKRIPSI:</strong><br>
+    WEB INI RESMI CARA MENGENTAUI NYA ADA TULISAN SALURAN TESTIMONI. KALO MAU CEK OUT PENCER AJA PESAN VIA WHATSAPP<br>
+    KALO MAU NANYA HARGA CHAT AJA<br>
+    SEKIAN.......
+  </div>
+
+  <main>
+    <div class="product">
+      <img src="dimzxd.jpg" alt="Beli Perlengkapan JB">
+      <h3>Beli Perlengkapan JB</h3>
+      <p class="description">Perlengkapan lengkap untuk JB, mudah digunakan dan praktis.</p>
+      <p>TANYA AJA</p>
+      <button onclick="orderViaWA('Beli Perlengkapan JB')">Pesan via WhatsApp</button>
+    </div>
+    <div class="product">
+      <img src="wave.jpg" alt="Beli Am Premium">
+      <h3>Beli Am Premium</h3>
+      <p class="description">Akun premium dengan fitur eksklusif dan dukungan penuh.</p>
+      <p>TANYA AJA</p>
+      <button onclick="orderViaWA('Beli Am Premium')">Pesan via WhatsApp</button>
+      <div class="channel">
+        <a href="https://whatsapp.com/channel/0029VbA0ztIHrDZga69HNc1q" target="_blank">Saluran Testimoni</a>
+      </div>
+    </div>
+    <div class="product">
+      <img src="whatsapp.jpg" alt="Beli Panel and Scrip WA">
+      <h3>Beli Panel and Scrip WA</h3>
+      <p class="description">Panel & script WhatsApp untuk otomatisasi bisnis Anda.</p>
+      <p>TANYA AJA</p>
+      <button onclick="orderViaWA('Beli Panel and Scrip WA')">Pesan via WhatsApp</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Web Uji Coba
+  </footer>
+
+  <script>
+    function orderViaWA(productName) {
+      var phoneNumber = "6285828216824"; // format internasional
+      var message = encodeURIComponent("Halo! Saya mau pesan: " + productName);
+      var waUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
